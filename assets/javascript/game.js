@@ -1,12 +1,12 @@
 //DOCUMENT READY
 $(document).ready(function() {
 
- //========================================================================================================================
+//========================================================================================================================
 //VARIABLES
 //========================================================================================================================
 
-var firstPlayer = true;
-var secondPlayer = false;
+    var firstPlayer = true;
+    var secondPlayer = false;
 
 
 
@@ -16,8 +16,21 @@ var secondPlayer = false;
 //========================================================================================================================
 
 
+    // function checkGameOver(){
+    //     if($( "#but-21" ).hasClass( "X" )) {
+    //         alert("You win");
+    //     }
+    //     else if() {
 
+    //     }
+    //     else if() {
 
+    //     }
+    //     else if() {
+
+    //     }
+    //     else
+    // }
 
 
 
@@ -31,22 +44,23 @@ var secondPlayer = false;
 //========================================================================================================================
 
 
-$('.gameBtn').click(function(){
-    if(firstPlayer == true){
-        $(this).text("X");
-        $(this).prop('disabled', true);
-        firstPlayer = false;
-        secondPlayer =  true;
-    }
-    else {
-        $(this).text("O");
-        $(this).prop('disabled', true);
-        firstPlayer = true;
-        secondPlayer =  false;
-    }
+    $('.gameBtn').click(function(){
+        if(firstPlayer == true){
+            $(this).text("X");
+            $(this).prop('disabled', true);
+            // $(this).attr("class", "X");
+            firstPlayer = false;
+            secondPlayer =  true;
+            checkGameOver;
 
-
-});
+        }
+        else {
+            $(this).text("O");
+            $(this).prop('disabled', true);
+            firstPlayer = true;
+            secondPlayer =  false;
+        }
+    });
 
 
 
